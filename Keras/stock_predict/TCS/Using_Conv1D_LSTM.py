@@ -2,9 +2,9 @@
 # coding: utf-8
 
 # In[1]:
+from __future__ import print_function
 
-
-import pandas as pd 
+import pandas as pd
 
 df = pd.read_csv('tcs_stock_2018-05-26.csv')
 df.head()
@@ -41,8 +41,8 @@ print(df.head())
 
 
 # 将dataframe 转化为 array
-data = df.as_matrix()
-
+# data = df.as_matrix()
+data = df.iloc[:,:].values
 
 # In[7]:
 
@@ -115,7 +115,6 @@ print("y_test", y_test.shape)
 # In[11]:
 
 
-from __future__ import print_function
 import math
 #importing keras modules
 from keras.models import Sequential
